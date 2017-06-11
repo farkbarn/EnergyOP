@@ -93,45 +93,24 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
                             <?php endif; ?>
                         </div>
 
+
+<!-- CONTACT1 -->
                         <div class="address-box">
-
-                            <h3><?php if ($onepress_contact_address_title != '') echo wp_kses_post($onepress_contact_address_title); ?></h3>
-
-                            <?php if ($onepress_contact_address != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><?php echo wp_kses_post($onepress_contact_address); ?></div>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if ($onepress_contact_phone != ''): ?>
+                            <h3>Oficina Maturin</h3>
                                 <div class="address-contact">
                                     <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><?php echo wp_kses_post($onepress_contact_phone); ?></div>
+                                    <div class="address-content">+58 291 3177695</div>
                                 </div>
-                            <?php endif; ?>
-
-                            <?php if ($onepress_contact_email != ''): ?>
+                        </div>
+<!-- CONTACT2 -->
+                        <div class="address-box">
+                            <h3>Oficina Lecherias</h3>
                                 <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><a href="mailto:<?php echo antispambot($onepress_contact_email); ?>"><?php echo antispambot($onepress_contact_email); ?></a></div>
+                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
+                                    <div class="address-content">+58 281 2825257</div>
                                 </div>
-                            <?php endif; ?>
-
-                            <?php if ($onepress_contact_fax != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fax fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><?php echo wp_kses_post($onepress_contact_fax); ?></div>
-                                </div>
-                            <?php endif; ?>
                         </div>
 
-
-                        
                     </div>
                 </div>
             </div>
