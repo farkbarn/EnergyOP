@@ -1,6 +1,6 @@
 <?php
 $onepress_hero_id         = get_theme_mod( 'onepress_hero_id', esc_html__('hero', 'onepress') );
-$onepress_hero_disable    = get_theme_mod( 'onepress_hero_disable' ) == 1 ? true : false ;
+$onepress_hero_disable    = get_theme_mod( 'onepress_hero_disable' ) == 1 ? false : false ;
 $onepress_hero_fullscreen = get_theme_mod( 'onepress_hero_fullscreen' );
 $onepress_hero_pdtop      = get_theme_mod( 'onepress_hero_pdtop', '10' );
 $onepress_hero_pdbotom    = get_theme_mod( 'onepress_hero_pdbotom', '10' );
