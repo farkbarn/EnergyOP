@@ -74,7 +74,7 @@ $ramastable='master';
     $theme_uri_slug = preg_replace('/-'.$ramastable.'$/', '', $theme_slug);
    $remote_version = '0.0.0';
    $style_css = wp_remote_get("https://raw.githubusercontent.com/".$usergithub."/".$theme_uri_slug."/".$ramastable."/style.css")['body'];
-   if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] )
+   if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] );
        $remote_version = _cleanup_header_comment( $match[1] );
    if (version_compare($theme_data->version, $remote_version, '<')) {
        $transient->response[$theme_slug] = array(
