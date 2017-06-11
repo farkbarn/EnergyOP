@@ -1,6 +1,6 @@
 <?php
 $onepress_hero_id         = get_theme_mod( 'onepress_hero_id', esc_html__('hero', 'onepress') );
-$onepress_hero_disable    = get_theme_mod( 'onepress_hero_disable' ) == 1 ? false : false ;
+$onepress_hero_disable    = get_theme_mod( 'onepress_hero_disable' ) == 1 ? true : false ;
 $onepress_hero_fullscreen = get_theme_mod( 'onepress_hero_fullscreen' );
 $onepress_hero_pdtop      = get_theme_mod( 'onepress_hero_pdtop', '10' );
 $onepress_hero_pdbotom    = get_theme_mod( 'onepress_hero_pdbotom', '10' );
@@ -14,27 +14,27 @@ if ( $onepress_hero_fullscreen != '1' ) {
 	$hero_content_style = ' style="padding-top: '. $onepress_hero_pdtop .'%; padding-bottom: '. $onepress_hero_pdbotom .'%;"';
 }
 
-$_images = get_theme_mod('onepress_hero_images');
+/*$_images = get_theme_mod('onepress_hero_images');
 if (is_string($_images)) {
 	$_images = json_decode($_images, true);
 }
 
 if ( empty( $_images ) || !is_array( $_images ) ) {
     $_images = array();
-}
+}*/
 
 $images = array();
 
-foreach ( $_images as $m ) {
+/*foreach ( $_images as $m ) {
 	$m  = wp_parse_args( $m, array('image' => '' ) );
 	$_u = onepress_get_media_url( $m['image'] );
 	if ( $_u ) {
 		$images[] = $_u;
 	}
-}
+}*/
 
 if ( empty( $images ) ){
-	$images = array( get_template_directory_uri().'/assets/images/hero5.jpg' );
+	$images[1] = array( get_template_directory_uri().'/assets/images/hero5.jpg' );
 }
 
 $is_parallax =  get_theme_mod( 'onepress_hero_parallax' ) == 1 && ! empty( $images ) ;
@@ -44,9 +44,20 @@ if ( $is_parallax ) {
     echo '<div class="parallax-bg" style="background-image: url('.esc_url( $images[0]).');" data-stellar-ratio="0.1" data-stellar-offset-parent="true"></div>';
 }
 
+// FARK
+$images[1] = array( get_template_directory_uri().'/assets/images/h4.jpg' );
+$images[2] = array( get_template_directory_uri().'/assets/images/h3.jpg' );
+$images[3] = array( get_template_directory_uri().'/assets/images/h2.jpg' );
+$images[0] = array( get_template_directory_uri().'/assets/images/h1.jpg' );
+$testimg=array();
+
+for ($i=0; $i < 4 ; $i++) { 
+	$testimg[$i]=$images[$i];
+}
+
 ?>
 <?php if ( ! $onepress_hero_disable && ! empty ( $images ) ) : ?>
-	<section  id="<?php if ( $onepress_hero_id != '' ){ echo esc_attr( $onepress_hero_id ); } ?>" <?php if ( ! empty ( $images) && ! $is_parallax ) { ?> data-images="<?php echo esc_attr( json_encode( $images ) ); ?>"<?php } ?>
+	<section  id="<?php if ( $onepress_hero_id != '' ){ echo esc_attr( $onepress_hero_id ); } ?>" <?php if ( ! empty ( $images) && ! $is_parallax ) { ?> data-images="<?php echo esc_attr( json_encode( $testimg ) ); ?>"<?php } ?>
              class="hero-slideshow-wrapper <?php echo ( $onepress_hero_fullscreen == 1 ) ? 'hero-slideshow-fullscreen' : 'hero-slideshow-normal'; ?>">
 
         <div class="slider-spinner">
