@@ -90,9 +90,6 @@ add_filter( 'pre_set_site_transient_update_themes', 'github_check_update' );
 
 /* EOL FUNCTIONS FARK */
 
-
-
-
 if ( ! function_exists( 'onepress_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
