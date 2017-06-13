@@ -57,7 +57,7 @@ for ($i=0; $i < 4 ; $i++) {
 
 ?>
 <?php if ( ! $onepress_hero_disable && ! empty ( $images ) ) : ?>
-	<section  id="<?php if ( $onepress_hero_id != '' ){ echo esc_attr( $onepress_hero_id ); } ?>" <?php if ( /*! empty ( $images) && ! $is_parallax*/ true ) { ?> data-images="<?php echo '[&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h1.jpg&quot;,&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h4.jpg&quot;,&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h3.jpg&quot;,&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h2.jpg&quot;]'; /*esc_attr( json_encode( $testimg ) );*/ ?>"<?php } ?>
+	<section  id="<?php if ( $onepress_hero_id != '' ){ echo esc_attr( $onepress_hero_id ); } ?>" <?php if ( /*! empty ( $images) && ! $is_parallax*/ true ) { ?> data-images="<?php echo '[&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h1.jpg&quot;,&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h2.jpg&quot;,&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h3.jpg&quot;,&quot;https:\/\/acerogroup.energy\/wp-content\/themes\/EnergyOP-master\/assets\/images\/h4.jpg&quot;]'; /*esc_attr( json_encode( $testimg ) );*/ ?>"<?php } ?>
              class="hero-slideshow-wrapper <?php echo ( $onepress_hero_fullscreen == 1 ) ? 'hero-slideshow-fullscreen' : 'hero-slideshow-normal'; ?>">
 
         <div class="slider-spinner">
