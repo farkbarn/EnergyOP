@@ -63,6 +63,8 @@ for ($i=0; $i < 4 ; $i++) {
         <div class="slider-spinner">
             <div class="double-bounce1"></div>
             <div class="double-bounce2"></div>
+            <div class="double-bounce3"></div>
+            <div class="double-bounce4"></div>
         </div>
 
         <?php
