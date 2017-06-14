@@ -35,7 +35,8 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 
-  <script src="assets/js/actions.js"></script>
+
+  <script src="<?php get_template_directory_uri().'/assets/js/actions.js' ?>"></script>
 
 <?php do_action( 'onepress_before_site_start' ); ?>
 <div id="page" class="hfeed site">
