@@ -9,6 +9,9 @@ $onepress_contact_text          = get_theme_mod( 'onepress_contact_text' );
 $onepress_contact_address_title = get_theme_mod( 'onepress_contact_address_title' );
 $onepress_contact_address       = get_theme_mod( 'onepress_contact_address' );
 $onepress_contact_phone         = get_theme_mod( 'onepress_contact_phone' );
+$onepress_contact_address_title2 = get_theme_mod( 'onepress_contact_address_title2' );
+$onepress_contact_address2       = get_theme_mod( 'onepress_contact_address2' );
+$onepress_contact_phone2         = get_theme_mod( 'onepress_contact_phone2' );
 $onepress_contact_email         = get_theme_mod( 'onepress_contact_email' );
 $onepress_contact_fax           = get_theme_mod( 'onepress_contact_fax' );
 
@@ -31,7 +34,7 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
                     <?php if ($onepress_contact_subtitle != '') echo '<h5 class="section-subtitle">' . esc_html($onepress_contact_subtitle) . '</h5>'; ?>
                     <?php if ($onepress_contact_title != '') echo '<h2 class="section-title">' . esc_html($onepress_contact_title) . '</h2>'; ?>
                     <?php if ( $desc ) {
-                        echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
+                        echo '<div class="section-desc">' . apply_filters( 'onepress_the_content', wp_kses_post( $desc ) ) . '</div>';
                     } ?>
                 </div>
                 <?php } ?>
@@ -53,9 +56,12 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
 
                     <div class="col-sm-6 wow slideInUp">
                         <br>
-                        <?php if ($onepress_contact_text != '') echo wp_kses_post($onepress_contact_text); ?>
+                        <?php
+                        if ($onepress_contact_text != '') {
+                            echo apply_filters( 'onepress_the_content', wp_kses_post( $onepress_contact_text ) );
+                        }
+                        ?>
                         <br><br>
-
                         <div class="address-box">
 
                             <h3><?php if ($onepress_contact_address_title != '') echo wp_kses_post($onepress_contact_address_title); ?></h3>
@@ -71,15 +77,30 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
                             <?php if ($onepress_contact_phone != ''): ?>
                                 <div class="address-contact">
                                     <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
-
                                     <div class="address-content"><?php echo wp_kses_post($onepress_contact_phone); ?></div>
+                                </div>
+                            <?php endif; ?>
+
+                            <h3><?php if ($onepress_contact_address_title2 != '') echo wp_kses_post($onepress_contact_address_title2); ?></h3>
+
+                            <?php if ($onepress_contact_address2 != ''): ?>
+                                <div class="address-contact">
+                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
+
+                                    <div class="address-content"><?php echo wp_kses_post($onepress_contact_address2); ?></div>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ($onepress_contact_phone2 != ''): ?>
+                                <div class="address-contact">
+                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
+                                    <div class="address-content"><?php echo wp_kses_post($onepress_contact_phone2); ?></div>
                                 </div>
                             <?php endif; ?>
 
                             <?php if ($onepress_contact_email != ''): ?>
                                 <div class="address-contact">
                                     <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
-
                                     <div class="address-content"><a href="mailto:<?php echo antispambot($onepress_contact_email); ?>"><?php echo antispambot($onepress_contact_email); ?></a></div>
                                 </div>
                             <?php endif; ?>
