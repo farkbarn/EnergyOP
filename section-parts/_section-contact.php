@@ -92,6 +92,25 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
                                 </div>
                             <?php endif; ?>
                         </div>
+
+
+<!-- CONTACT1 -->
+                        <div class="address-box">
+                            <h3>Oficina Maturin</h3>
+                                <div class="address-contact">
+                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
+                                    <div class="address-content">+58 291 3177695</div>
+                                </div>
+                        </div>
+<!-- CONTACT2 -->
+                        <div class="address-box">
+                            <h3>Oficina Lecherias</h3>
+                                <div class="address-contact">
+                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
+                                    <div class="address-content">+58 281 2825257</div>
+                                </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
