@@ -832,7 +832,7 @@ function onepress_customize_register( $wp_customize ) {
 						'priority'     => 40,
 						'section'       => 'onepress_hero_images',
 						'title_format'  => esc_html__( 'Background', 'onepress'), // [live_title]
-						'max_item'      => 2, // Maximum item can add
+						'max_item'      => 5, // Maximum item can add
 
 						'fields'    => array(
 							'image' => array(
@@ -2783,6 +2783,21 @@ function onepress_customize_register( $wp_customize ) {
 			)
 		);
 
+                // Address Box 2
+                $wp_customize->add_setting( 'onepress_contact_address_title2',
+                        array(
+                                'sanitize_callback' => 'sanitize_text_field',
+                                'default'           => '',
+                        )
+                );
+                $wp_customize->add_control( 'onepress_contact_address_title2',
+                        array(
+                                'label'         => esc_html__('Contact Box Title 2', 'onepress'),
+                                'section'               => 'onepress_contact_content',
+                                'description'   => '',
+                        )
+                );
+
 		// Contact Text
 		$wp_customize->add_setting( 'onepress_contact_address',
 			array(
@@ -2798,6 +2813,21 @@ function onepress_customize_register( $wp_customize ) {
 			)
 		);
 
+                // Contact Text 2
+                $wp_customize->add_setting( 'onepress_contact_address2',
+                        array(
+                                'sanitize_callback' => 'onepress_sanitize_text',
+                                'default'           => '',
+                        )
+                );
+                $wp_customize->add_control( 'onepress_contact_address2',
+                        array(
+                                'label'     => esc_html__('Address 2', 'onepress'),   
+                                'section'               => 'onepress_contact_content',
+                                'description'   => '',
+                        )
+                );
+
 		// Contact Phone
 		$wp_customize->add_setting( 'onepress_contact_phone',
 			array(
@@ -2807,13 +2837,28 @@ function onepress_customize_register( $wp_customize ) {
 		);
 		$wp_customize->add_control( 'onepress_contact_phone',
 			array(
-				'label'     	=> esc_html__('Phone', 'onepress'),
+				'label'     	=> esc_html__('Phone 2', 'onepress'),
 				'section' 		=> 'onepress_contact_content',
 				'description'   => '',
 			)
 		);
 
-		// Contact Email
+                // Contact Phone2
+                $wp_customize->add_setting( 'onepress_contact_phone2',
+                        array( 
+                                'sanitize_callback' => 'onepress_sanitize_text',
+                                'default'           => '',
+                        )
+                );
+                $wp_customize->add_control( 'onepress_contact_phone2',
+                        array(
+                                'label'         => esc_html__('Phone', 'onepress'),
+                                'section'               => 'onepress_contact_content',
+                                'description'   => '',
+                        )
+                );
+
+                // Contact Email
 		$wp_customize->add_setting( 'onepress_contact_email',
 			array(
 				'sanitize_callback' => 'sanitize_email',

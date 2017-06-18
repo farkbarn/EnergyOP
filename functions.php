@@ -7,6 +7,31 @@
  * @package OnePress
  */
 
+// [polylang lang="en"]English[/polylang][polylang lang="es"]Spanish[/polylang]
+function polylang_shortcode($atts, $content = null)
+{
+        if (empty($content))
+                return '';
+        extract( shortcode_atts( array('lang' => ''), $atts ) );
+        if (empty($lang))
+                return "<h3>You must specify 'lang' using shortcode: polylang</h3>";
+
+        return ($lang == pll_current_language()) ? $content : '';
+}
+add_shortcode('polylang', 'polylang_shortcode');
+
+/***** Cadenas a traducir con polylang *****/
+pll_register_string("bd_ep", "Energía y Petróleo", "Own");
+pll_register_string("bd_oi", "Obras e Infraestructuras", "Own");
+pll_register_string("bp_ds", "Defensa y Seguridad", "Own");
+
+function onepress_footer_site_info() {
+     ?>
+     <?php printf(esc_html__('Copyright %1$s %2$s %3$s AceroGroup', 'onepress'), '&copy;', esc_attr(date('Y')), esc_attr(get_bloginfo())); ?>
+     <?php
+}
+    add_action( 'onepress_footer_site_info', 'onepress_footer_site_info' );
+
 if ( ! function_exists( 'onepress_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.

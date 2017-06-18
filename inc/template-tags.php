@@ -375,7 +375,21 @@ if ( ! function_exists( 'onepress_custom_inline_style' ) ) {
                 {
                     border-color : #<?php echo $primary; ?>;
                 }
-            <?php
+                <?php
+                if ( class_exists( 'WooCommerce' ) ) { ?>
+                    .woocommerce #respond input#submit.alt,
+                    .woocommerce a.button.alt,
+                    .woocommerce button.button.alt,
+                    .woocommerce input.button.alt {
+                        background-color: #<?php echo $primary; ?>;
+                    }
+                    .woocommerce #respond input#submit.alt:hover,
+                    .woocommerce a.button.alt:hover,
+                    .woocommerce button.button.alt:hover,
+                    .woocommerce input.button.alt:hover {
+                        background-color: #<?php echo $primary; ?>;
+                    }
+                <?php }
             } // End $primary
 
             /**
@@ -531,6 +545,7 @@ if ( ! function_exists( 'onepress_custom_inline_style' ) ) {
             ),
             $css
         );
+
 
         if ( ! function_exists( 'wp_get_custom_css' ) ) {  // Back-compat for WordPress < 4.7.
             $custom = get_option('onepress_custom_css');
@@ -955,7 +970,7 @@ if ( ! function_exists( 'onepress_footer_site_info' ) ) {
         ?>
         <?php printf(esc_html__('Copyright %1$s %2$s %3$s', 'onepress'), '&copy;', esc_attr(date('Y')), esc_attr(get_bloginfo())); ?>
         <span class="sep"> &ndash; </span>
-        <?php printf(esc_html__('%1$s theme by %2$s', 'onepress'), '<a href="' . esc_url('https://www.acerogroup.energy', 'onepress') . '">AceroGroup</a>', 'AceroGroup'); ?>
+        <?php printf(esc_html__('%1$s theme by %2$s', 'onepress'), '<a href="' . esc_url('https://www.famethemes.com/themes/onepress', 'onepress') . '">OnePress</a>', 'FameThemes'); ?>
         <?php
     }
 }
