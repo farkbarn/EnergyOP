@@ -1,10 +1,10 @@
 /*
-Theme Name: OnePress
-Theme URI: https://www.famethemes.com/themes/onepress/
-Author: FameThemes
-Author URI: http://www.famethemes.com
-Description: OnePress is an outstanding creative and flexible WordPress one page theme well suited for business website, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design. The theme overall is an elegant and classic one, a fine example of Bootstrap 4 WordPress theme which compatibility with latest version of WooCommerce. (Live preview : http://www.famethemes.com/preview/?theme=OnePress)
-Version: 1.3.8
+Theme Name: EnergyOP
+Theme URI: https://acerogroup.energy/
+Author: AceroGroup
+Author URI: https://acerogroup.energy/
+Description: EnergyOP is an outstanding creative and flexible WordPress one page theme well suited for business website, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design. The theme overall is an elegant and classic one, a fine example of Bootstrap 4 WordPress theme which compatibility with latest version of WooCommerce.
+Version: 1.1.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: onepress
@@ -13,8 +13,8 @@ Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-menu, feature
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-OnePress is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+EnergyOP is based on OnePress modified to company AceroGroup.
+it's distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -367,6 +367,7 @@ table > tfoot > tr > td {
 	line-height: 1.42857;
 	padding: 5px;
 	vertical-align: middle;
+	text-align: center;
 }
 
 table > thead > tr > th, table > thead > tr > td {
@@ -1335,10 +1336,6 @@ h6, p, ul, ol, dl, blockquote, pre {
 
 .site-footer .site-info a:hover {
 	text-decoration: underline;
-}
-
-.site-footer .site-info .container {
-	position: initial;
 }
 
 .site-footer .btt a {
@@ -3831,76 +3828,6 @@ img.mfp-img {
 .woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span {
 	padding: 9px 14px;
 	font-weight: bold;
-}
-
-.woocommerce #customer_details .col-1, .woocommerce #customer_details .col-2, .woocommerce .woocommerce-Addresses .col-1, .woocommerce .woocommerce-Addresses .col-2 {
-	width: 100%;
-	max-width: 100%;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-.woocommerce .woocommerce-additional-fields h3 {
-	margin-top: 20px;
-}
-
-.woocommerce .cart_totals th {
-	text-align: left;
-}
-
-.woocommerce .cart_totals h2 {
-	font-size: 20px;
-	font-size: 1.25rem;
-}
-
-.woocommerce .wc-proceed-to-checkout {
-	text-align: center;
-}
-
-.woocommerce .woocommerce-order-details__title,
-.woocommerce .woocommerce-customer-details h2 {
-	font-size: 20px;
-	font-size: 1.25rem;
-}
-
-.woocommerce ul.products li.product .price del {
-	display: inline-block;
-}
-
-.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
-	width: 100%;
-	float: none;
-}
-
-#add_payment_method .wc-proceed-to-checkout a.checkout-button,
-.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
-.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
-	display: inline-block;
-	margin: 0 auto;
-}
-
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-	background-color: #03c4eb;
-}
-
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
-	background-color: #03c4eb;
-	opacity: .8;
-}
-
-.woocommerce-MyAccount-navigation ul {
-	margin: 0px;
-	padding-left: 0px;
-}
-
-.woocommerce-MyAccount-navigation li {
-	list-style: none;
 }
 
 /* Breadcrumbs
